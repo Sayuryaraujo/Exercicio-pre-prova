@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+struct Produto {
+    char nome[30];
+    int codigo;
+    float preco;
+};
+
+int main() {
+    struct Produto produtos[5] = {
+        {"torta", 200, 11.00},
+        {"Pão", 201, 2.30},
+        {"Coxinha", 202, 6.50},
+        {"Mortadela", 203, 3.00},
+        {"Queijo", 204, 8.30}
+    };
+    int i;
+
+    
+    printf("Produtos com preço superior a R$ 10,00:\n");
+    for (i = 0; i < 5; i++) {
+        if (produtos[i].preco > 10.00) {
+            printf("Nome: %s, Código: %d, Preço: R$ %.2f\n", 
+                   produtos[i].nome, produtos[i].codigo, produtos[i].preco);
+        }
+    }
+
+    return 0;
+}

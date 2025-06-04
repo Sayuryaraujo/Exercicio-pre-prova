@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    int ingressos, pontos, continuar;
+
+    do {
+        printf("Cinema CinePonto\n");
+        printf("Digite a quantidade de ingressos comprados: ");
+        scanf("%d", &ingressos);
+
+        pontos = ingressos;
+        printf("Cliente acumulou %d pontos.\n", pontos);
+
+        printf("Deseja cadastrar outro cliente? (1-Sim / 0-Não): ");
+        scanf("%d", &continuar);
+    } while (continuar != 0);
+
+    printf("Sistema encerrado.\n");
+
+    return 0;
+}
